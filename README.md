@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+## project structure
+
 03-react-movies/
 ├── src/
 │ ├── components/
