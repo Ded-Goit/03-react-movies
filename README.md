@@ -1,48 +1,48 @@
 # React + TypeScript + Vite
 
-## project structure
+## 📂 Project structure
 
-03-react-movies/
-├── src/
-│ ├── components/
-│ │ ├── App/
-│ │ │ ├── App.tsx
-│ │ │ └── App.module.css
-│ │ ├── ErrorMessage/
-│ │ │ ├── ErrorMessage.tsx
-│ │ │ └── ErrorMessage.module.css
-│ │ ├── Loader/
-│ │ │ ├── Loader.tsx
-│ │ │ └── Loader.module.css
-│ │ ├── MovieGrid/
-│ │ │ ├── MovieGrid.tsx
-│ │ │ └── MovieGrid.module.css
-│ │ └── MovieModal/
-│ │ ├── MovieModal.tsx
-│ │ └── MovieModal.module.css
-│ │ ├── SearchBar/
-│ │ │ ├── SearchBar.tsx
-│ │ │ └── SearchBar.module.css
-│ ├── services/
-│ │ └── movieService.ts
-│ ├── types/
-│ │ └── movie.ts
-│ ├── declarations.d.ts
-│ ├── global.css
-│ ├── main.tsx
-│ └── vite-env.d.ts
-├── .gitignore
-├── eslint.config.js
-└── index.html
-└── package-lock.json
-└── package.json
-└── README.md
-└── tsconfig.app.json
-└── tsconfig.json
-└── tsconfig.node.json
-└── vite.config.ts
+           03-react-movies/
+           ├── 📁src/
+           │ ├── components/
+           │ │ ├── 📁App/
+           │ │ │ ├── 📄App.tsx
+           │ │ │ └── 📄App.module.css
+           │ │ ├── 📁ErrorMessage/
+           │ │ │ ├── 📄ErrorMessage.tsx
+           │ │ │ └── 📄ErrorMessage.module.css
+           │ │ ├── 📁Loader/
+           │ │ │ ├── 📄Loader.tsx
+           │ │ │ └── Loader.module.css
+           │ │ ├── 📁MovieGrid/
+           │ │ │ ├── 📄MovieGrid.tsx
+           │ │ │ └── 📄MovieGrid.module.css
+           │ │ └── 📁MovieModal/
+           │ │ │ ├── 📄MovieModal.tsx
+           │ │ │ └── 📄MovieModal.module.css
+           │ │ ├── 📁SearchBar/
+           │ │ │ ├── 📄SearchBar.tsx
+           │ │ │ └── 📄SearchBar.module.css
+           │ ├── 📁services/
+           │ │ └── 📄movieService.ts
+           │ ├── 📁types/
+           │ │ └── 📄movie.ts
+           │ ├── 📄declarations.d.ts
+           │ ├── 📄global.css
+           │ ├── 📄main.tsx
+           │ └── 📄vite-env.d.ts
+           ├── 📄.gitignore
+           ├── 📄eslint.config.js
+           └── 📄index.html
+           └── 📄package-lock.json
+           └── 📄package.json
+           └── 📄README.md
+           └── 📄tsconfig.app.json
+           └── 📄tsconfig.json
+           └── 📄tsconfig.node.json
+           └── 📄vite.config.ts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
