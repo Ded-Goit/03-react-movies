@@ -1,6 +1,17 @@
+import { useId } from "react";
 import styles from "./SearchBar.module.css";
 
-export default function SearchBar() {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+export default function SearchBar({ onSearch }: SearchBarProps) {
+  const id = useId();
+
+  const handleSubmit = (formData: FormData) => {
+    const query = formData.get("query") as string;
+    onSearch(query);
+  };
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -12,7 +23,7 @@ export default function SearchBar() {
         >
           Powered by TMDB
         </a>
-        <form className={styles.form}>
+        <form className={styles.form} action={handleSubmit}>
           <input
             className={styles.input}
             type="text"
@@ -20,6 +31,7 @@ export default function SearchBar() {
             autoComplete="off"
             placeholder="Search movies..."
             autoFocus
+            id={`${id}-query`}
           />
           <button className={styles.button} type="submit">
             Search

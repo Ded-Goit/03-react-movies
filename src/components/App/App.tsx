@@ -10,9 +10,12 @@ import { useState } from "react";
 export default function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
+  const handleSearh = (newQuery: string) => {
+    console.log("handleSearh", newQuery);
+  };
   return (
     <div className={styles.app}>
-      <SearchBar />
+      <SearchBar onSearch={handleSearh} />
       <MovieGrid />
       <Loader />
       <ErrorMessage />
