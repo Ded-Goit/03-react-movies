@@ -29,26 +29,6 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
     };
   }, [onClose]);
 
-  /*useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-
-    const handleClickOutside = (event: MouseEvent) => {
-      if ((event.target as HTMLElement).classList.contains(css.backdrop)) {
-        onClose();
-      }
-    };
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("click", handleClickOutside);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("click", handleClickOutside);
-    };
-  }, [onClose]);*/
-
   return (
     <div
       className={css.backdrop}
