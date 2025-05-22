@@ -7,7 +7,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import MovieModal from "../MovieModal/MovieModal";
 import type { Movie } from "../../types/movie";
 import { useState } from "react";
-//const myKey = import.meta.env.VITE_TMDB_TOKEN;
+
 export default function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
