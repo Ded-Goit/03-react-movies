@@ -7,7 +7,7 @@ import MovieModal from "../MovieModal/MovieModal";
 import type { Movie } from "../../types/movie";
 import { useState } from "react";
 import { fetchMovies } from "../../services/movieService";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -15,7 +15,7 @@ export default function App() {
   const [error, setError] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
-  const handleSearh = async (query: string) => {
+  const handleSearch = async (query: string) => {
     setLoading(true);
     setError(false);
     setMovies([]);
@@ -35,7 +35,8 @@ export default function App() {
   };
   return (
     <div className={styles.app}>
-      <SearchBar onSearch={handleSearh} />
+      <Toaster />
+      <SearchBar onSearch={handleSearch} />
       {loading && <Loader />}
       {error && <ErrorMessage />}
       {!loading && !error && movies.length > 0 && (
