@@ -3,44 +3,46 @@
 ## 📂 Project structure
 
            03-react-movies/
-           ├── 📁src/
-           │ ├── components/
-           │ │ ├── 📁App/
-           │ │ │ ├── 📄App.tsx
-           │ │ │ └── 📄App.module.css
-           │ │ ├── 📁ErrorMessage/
-           │ │ │ ├── 📄ErrorMessage.tsx
-           │ │ │ └── 📄ErrorMessage.module.css
-           │ │ ├── 📁Loader/
-           │ │ │ ├── 📄Loader.tsx
-           │ │ │ └── Loader.module.css
-           │ │ ├── 📁MovieGrid/
-           │ │ │ ├── 📄MovieGrid.tsx
-           │ │ │ └── 📄MovieGrid.module.css
-           │ │ └── 📁MovieModal/
-           │ │ │ ├── 📄MovieModal.tsx
-           │ │ │ └── 📄MovieModal.module.css
-           │ │ ├── 📁SearchBar/
-           │ │ │ ├── 📄SearchBar.tsx
-           │ │ │ └── 📄SearchBar.module.css
-           │ ├── 📁services/
-           │ │ └── 📄movieService.ts
-           │ ├── 📁types/
-           │ │ └── 📄movie.ts
-           │ ├── 📄declarations.d.ts
-           │ ├── 📄global.css
-           │ ├── 📄main.tsx
-           │ └── 📄vite-env.d.ts
-           ├── 📄.gitignore
-           ├── 📄eslint.config.js
-           └── 📄index.html
-           └── 📄package-lock.json
-           └── 📄package.json
-           └── 📄README.md
-           └── 📄tsconfig.app.json
-           └── 📄tsconfig.json
-           └── 📄tsconfig.node.json
-           └── 📄vite.config.ts
+           ├── 📁public         Contains static assets that are copied directly to the final build
+           ├── 📁src/                 Main source directory where all the application code resides.
+           │ ├── 📁assets Stores general-purpose static files used in the app (e.g., images, icons).
+           │ ├── 📁components/ Folder for all React UI components, structured by feature or purpose.
+           │ │ ├── 📁App/     Contains the root application component and its CSS styles.
+           │ │ │ ├── 📄App.tsx      — Main component where application logic is initiated.
+           │ │ │ └── 📄App.module.css             — CSS Module for styling App.tsx.
+           │ │ ├── 📁ErrorMessage/           UI component for displaying error messages.
+           │ │ │ ├── 📄ErrorMessage.tsx           — Component for showing error alerts.
+           │ │ │ └── 📄ErrorMessage.module.css    — Styles specific to ErrorMessage.
+           │ │ ├── 📁Loader/                 UI loader/spinner component.
+           │ │ │ ├── 📄Loader.tsx                 — Loading animation or spinner component.
+           │ │ │ └── Loader.module.css            — Styling for the loader.
+           │ │ ├── 📁MovieGrid/                  Component for displaying a grid of movies.
+           │ │ │ ├── 📄MovieGrid.tsx              — Grid layout for showing movie items.
+           │ │ │ └── 📄MovieGrid.module.css       — Styling for the movie grid.
+           │ │ └── 📁MovieModal/  Modal component for displaying detailed movie information.
+           │ │ │ ├── 📄MovieModal.tsx             — Modal window with movie details.
+           │ │ │ └── 📄MovieModal.module.css      — Modal-specific styles.
+           │ │ ├── 📁SearchBar/              Search input and button component.
+           │ │ │ ├── 📄SearchBar.tsx              — Handles search input and form submission.
+           │ │ │ └── 📄SearchBar.module.css       — Styling for the search bar.
+           │ ├── 📁services/        Contains service functions for external API interactions.
+           │ │ └── 📄movieService.ts              — Logic for fetching movie data from TMDB API.
+           │ ├── 📁types/           TypeScript type definitions.
+           │ │ └── 📄movie.ts              — Type definitions for movie-related data structures.
+           │ ├── 📄declarations.d.ts    Global TypeScript declarations
+           │ ├── 📄global.css           Global styles applied throughout the app.
+           │ ├── 📄main.tsx             Entry point of the React application.
+           │ └── 📄vite-env.d.ts Environment type declarations for Vite's special variables like
+           ├── 📄.gitignore          Lists files/folders that Git should ignore
+           ├── 📄README.md           Project documentation and setup instructions.
+           ├── 📄eslint.config.js    ESLint configuration for code linting and formatting rules.
+           └── 📄index.html Main HTML template used by Vite to inject the app during build and dev.
+           └── 📄package-lock.json   Lockfile that ensures consistent npm install behavior.
+           └── 📄package.json        Lists project dependencies, scripts, and metadata.
+           └── 📄tsconfig.app.json   TypeScript configuration specific to the application code.
+           └── 📄tsconfig.json       Root TypeScript config file.
+           └── 📄tsconfig.node.json  TypeScript config for Node.js-specific tooling or scripts.
+           └── 📄vite.config.ts      Vite configuration file for build and development settings.
 
 ### This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
