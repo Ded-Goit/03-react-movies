@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { type AxiosResponse } from "axios";
 import type { Movie } from "../types/movie";
 
 const BASE_URL = `https://api.themoviedb.org/3/search/movie`;
@@ -9,11 +9,21 @@ interface FetchMoviesResponse {
 }
 
 export const fetchMovies = async (query: string): Promise<Movie[]> => {
-  const response = await axios.get<FetchMoviesResponse>(BASE_URL, {
-    params: { query },
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-    },
-  });
-  return response.data.results;
+  if (!query.trim()) return [];
+
+  try {
+    const response: AxiosResponse<FetchMoviesResponse> = await axios.get(
+      BASE_URL,
+      {
+        params: { query },
+        headers: {
+          Authorization: `Bearer ${TOKEN}`,
+        },
+      }
+    );
+    return response.data.results;
+  } catch (error) {
+    console.error("error", error);
+    return [];
+  }
 };
